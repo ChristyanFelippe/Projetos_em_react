@@ -1,0 +1,36 @@
+.converter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 400px;
+    background-color: rgb(250, 250, 250);
+    border-style: solid;
+    border-color: black;
+    box-shadow: 0 4px 12px;
+    margin: 2rem auto;
+}
+
+.converter h2 {
+    color: #343a40;
+    font-size: 1.rem;
+    margin-bottom: 2rem;
+}
+
+.converter input,
+.converter select {
+    width: 80%;
+    padding: 0.7rem 1rem;
+    box-sizing: border-box;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #495057;
+    background-color: #ffffff;
+    border: 1px solid #ced4da;
+}
+
+.converter input {
+    margin-bottom: 30px;
+    
+}
