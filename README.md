@@ -1,2 +1,2 @@
-# Projetos_em_react
-Projetos_em_react
+# Run project
+> npm run dev
