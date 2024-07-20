@@ -8,8 +8,14 @@ const Calculator = () => {
   const [pendingValue, setPendingValue] = useState(null);
   const [completeOperation, setCompleteOperation] = useState("");
 
-  const keypadnumbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
-  const operations = ["+", "-", "*", "/"];
+  const coluna1 = ["1", "2", "3"];
+  const coluna2 = ["4", "5", "6"];
+  const coluna3 = ["7", "8", "9"];
+  const zero = ["0"]
+  const divisao = ["/"]
+  const multiplicacao = ["*"]
+  const soma = ["+"]
+  const subtracao = ["-"]
 
   const handleclick = (val) => {
     setCurrentValue((prevValue) => {
@@ -92,18 +98,48 @@ const Calculator = () => {
       <div className="complete-operation">{completeOperation}</div>
       <div className="display">{currentValue}</div>
       <div className="buttons">
-        <button onClick={handleClear}>AC</button>
-        {keypadnumbers.map((num) => (
+        {coluna1.map((num) => (
           <button key={num} onClick={() => handleclick(num)}>
             {num}
           </button>
         ))}
-        {operations.map((operation) => (
+        {divisao.map((operation) => (
           <button key={operation} onClick={() => handleOperation(operation)}>
             {operation}
           </button>
         ))}
+        {coluna2.map((num) => (
+          <button key={num} onClick={() => handleclick(num)}>
+            {num}
+          </button>
+        ))}
+        {multiplicacao.map((operation) => (
+          <button key={operation} onClick={() => handleOperation(operation)}>
+            {operation}
+          </button>
+        ))}
+        {coluna3.map((num) => (
+          <button key={num} onClick={() => handleclick(num)}>
+            {num}
+          </button>
+        ))}
+        {soma.map((operation) => (
+          <button key={operation} onClick={() => handleOperation(operation)}>
+            {operation}
+          </button>
+        ))}
+        <button onClick={handleClear}>AC</button>
+        {zero.map((num) => (
+          <button key={num} onClick={() => handleclick(num)}>
+            {num}
+          </button>
+        ))}
         <button onClick={handleCalculate}>=</button>
+        {subtracao.map((operation) => (
+          <button key={operation} onClick={() => handleOperation(operation)}>
+            {operation}
+          </button>
+        ))}
       </div>
     </div>
   );
