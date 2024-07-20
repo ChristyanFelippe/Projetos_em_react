@@ -11,11 +11,11 @@ const Calculator = () => {
   const coluna1 = ["1", "2", "3"];
   const coluna2 = ["4", "5", "6"];
   const coluna3 = ["7", "8", "9"];
-  const zero = ["0"]
-  const divisao = ["/"]
-  const multiplicacao = ["*"]
-  const soma = ["+"]
-  const subtracao = ["-"]
+  const zero = ["0"];
+  const divisao = ["/"];
+  const multiplicacao = ["*"];
+  const soma = ["+"];
+  const subtracao = ["-"];
 
   const handleclick = (val) => {
     setCurrentValue((prevValue) => {
