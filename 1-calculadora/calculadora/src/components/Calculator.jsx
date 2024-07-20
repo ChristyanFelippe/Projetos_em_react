@@ -23,7 +23,7 @@ const Calculator = () => {
   };
 
   const handleOperation = (operation) => {
-    setCompleteOperation(currentValue + " " + operation);
+    setCompleteOperation(currentValue + " " + operation + " ");
     setPedingOperation(operation);
     setPendingValue(currentValue);
     setCurrentValue("0");
@@ -46,28 +46,28 @@ const Calculator = () => {
     let result;
 
     switch (pendingOperation) {
-        case "+":
-            result = num1 + num2;
-            break;
-        case "-":
-            result = num1 - num2;
-            break;
-        case "*":
-            result = num1 * num2;
-            break;
-        case "/":
-            if (num2 != 0) {
-                result = num1 / num2;
-            } else {
-                setCurrentValue("Invalid");
-                setCompleteOperation("Invalid");
-                setPedingOperation(null);
-                setPendingValue(null);
-                return;
-            }
-            
-            break;
-    
+      case "+":
+        result = num1 + num2;
+        break;
+      case "-":
+        result = num1 - num2;
+        break;
+      case "*":
+        result = num1 * num2;
+        break;
+      case "/ ":
+        if (num2 != 0) {
+          result = num1 / num2;
+        } else {
+          setCurrentValue("Invalid");
+          setCompleteOperation("Invalid");
+          setPedingOperation(null);
+          setPendingValue(null);
+          return;
+        }
+
+        break;
+
 
       default:
         break;
@@ -75,12 +75,12 @@ const Calculator = () => {
 
     setCompleteOperation(
       pendingValue +
-        " " +
-        pendingOperation +
-        " " +
-        currentValue +
-        " = " +
-        result
+      " " +
+      pendingOperation +
+      " " +
+      currentValue +
+      " = " +
+      result
     );
     setCurrentValue(result.toString());
     setPedingOperation(null);
